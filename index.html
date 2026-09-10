@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PheonixType - Typing Practice</title>
+
+   <meta name="description" content="Free online typing practice to improve your typing speed and accuracy. Take typing tests and improve your WPM.">
+
+   <meta name="keywords" content="typing practice, typing test, typing speed test, online typing practice, WPM test">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= INTRO / SPLASH SCREEN ================= -->
+
+    <div
+        id="introScreen"
+        class="intro-screen">
+
+        <!-- SITE NAME BADGE -->
+        <div class="intro-site-badge">
+            PHEONIX TYPE
+        </div>
+
+        <!-- FLOATING CLOUDS -->
+        <div class="intro-clouds" aria-hidden="true">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+        </div>
+
+        <div class="intro-content">
+
+            <div
+                class="intro-image"
+                id="introImage">
+
+                <!-- REALISTIC PHOENIX -->
+                <svg
+                    class="phoenix-svg"
+                    viewBox="0 0 200 200"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Phoenix bird">
+
+                    <defs>
+                        <radialGradient id="phoenixBody" cx="45%" cy="35%" r="70%">
+                            <stop offset="0%" stop-color="#ffe29a"/>
+                            <stop offset="35%" stop-color="#ff9a3c"/>
+                            <stop offset="70%" stop-color="#ff5722"/>
+                            <stop offset="100%" stop-color="#c62828"/>
+                        </radialGradient>
+                        <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffcc66"/>
+                            <stop offset="45%" stop-color="#ff7a1a"/>
+                            <stop offset="100%" stop-color="#b71c1c"/>
+                        </linearGradient>
+                        <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffd54f"/>
+                            <stop offset="50%" stop-color="#ff6f00"/>
+                            <stop offset="100%" stop-color="#d84315"/>
+                        </linearGradient>
+                    </defs>
+
+                    <g class="phoenix-tail">
+                        <path d="M100 120 C 70 150, 40 175, 15 195 C 45 185, 70 175, 92 150 Z" fill="url(#tailGrad)"/>
+                        <path d="M100 122 C 90 160, 80 185, 68 198 C 90 190, 105 172, 108 145 Z" fill="url(#tailGrad)" opacity="0.85"/>
+                        <path d="M104 120 C 120 155, 140 178, 165 193 C 138 180, 115 168, 100 142 Z" fill="url(#tailGrad)" opacity="0.9"/>
+                    </g>
+
+                    <g class="phoenix-wing phoenix-wing-left">
+                        <path d="M96 95 C 55 85, 20 70, 4 40 C 30 55, 55 62, 80 78 C 65 60, 55 45, 52 25 C 75 45, 92 65, 100 90 Z" fill="url(#wingGrad)"/>
+                    </g>
+
+                    <g class="phoenix-wing phoenix-wing-right">
+                        <path d="M104 95 C 145 85, 180 70, 196 40 C 170 55, 145 62, 120 78 C 135 60, 145 45, 148 25 C 125 45, 108 65, 100 90 Z" fill="url(#wingGrad)"/>
+                    </g>
+
+                    <ellipse cx="100" cy="98" rx="26" ry="34" fill="url(#phoenixBody)"/>
+
+                    <circle cx="100" cy="58" r="17" fill="url(#phoenixBody)"/>
+
+                    <path d="M100 42 C 96 28, 90 20, 82 14 C 92 16, 100 22, 104 34 Z" fill="#ffd54f"/>
+                    <path d="M104 40 C 108 24, 116 15, 126 10 C 116 16, 110 26, 108 38 Z" fill="#ff7043"/>
+
+                    <path d="M115 58 L 130 61 L 115 65 Z" fill="#ffca28"/>
+
+                    <circle cx="106" cy="55" r="2.6" fill="#2b0f00"/>
+
+                </svg>
+
+            </div>
+
+            <div
+                id="introText"
+                class="intro-text">
+
+                <h1 class="intro-title">
+                    Pheonix Type
+                </h1>
+
+                <p class="intro-subtitle">
+                    Improve your typing speed and accuracy
+                </p>
+
+                <p
+                    id="introMotivation"
+                    class="intro-motivation">
+                </p>
+
+                <button
+                    id="introContinueButton"
+                    class="intro-continue-btn">
+                    Continue →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LEVEL SELECT SCREEN ================= -->
+
+    <div
+        id="levelSelectScreen"
+        class="level-select-screen">
+
+        <div class="level-select-content">
+
+            <h1 class="level-select-title">
+                Choose Your Level
+            </h1>
+
+            <p class="level-select-subtitle">
+                Pick any unlocked level to continue. Locked levels open once
+                you complete the one before them.
+            </p>
+
+            <div
+                id="levelSelectGrid"
+                class="level-select-grid">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="logo">
+                Pheonix Type
+            </div>
+
+            <p class="subtitle">
+                Improve your typing speed and accuracy
+            </p>
+
+            <!-- ================= ACCOUNT / PROFILE ================= -->
+
+            <div
+                class="auth-bar"
+                id="authBar">
+
+                <button
+                    id="openProfileButton"
+                    class="profile-open-btn"
+                    type="button">
+                    👤 My Profile
+                </button>
+
+            </div>
+
+            <!-- ================= PLAYER SUMMARY ================= -->
+
+            <div class="top-summary">
+
+                <!-- CURRENT LEVEL -->
+
+                <div class="top-summary-card current-level-top">
+
+                    <div
+                        class="top-level-icon"
+                        id="levelImage">
+                        🌱
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Current Level</span>
+
+                        <strong id="topLevelName">
+                            Level 1 — Beginner
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST WPM -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        🏆
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Best WPM</span>
+
+                        <strong id="bestWpm">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST STREAK -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        🔥
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Best Streak</span>
+
+                        <strong id="bestStreakTop">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL TESTS -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        📝
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Tests Completed</span>
+
+                        <strong id="totalTestsCompleted">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <aside class="side-panel left-panel">
+
+            <h2>🏆 Achievements</h2>
+
+            <div class="achievement-summary">
+
+                <strong id="achievementCount">
+                    0
+                </strong>
+
+                <span>/ 100 Unlocked</span>
+
+            </div>
+
+
+            <div
+                id="achievementList"
+                class="achievement-list">
+
+                <div class="achievement locked">
+                    🔒 Achievements unlock after 5 sentences
+                </div>
+
+            </div>
+
+
+            <!-- ================= CUSTOMIZE / THEME ================= -->
+
+            <div class="settings-card">
+
+                <h3>🎨 Customize</h3>
+
+                <p class="settings-label">
+                    Keyboard &amp; accent theme
+                </p>
+
+                <div
+                    id="themeSwatches"
+                    class="theme-swatches">
+
+                    <button
+                        class="theme-swatch swatch-classic active"
+                        data-theme="classic"
+                        title="Classic"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-neon"
+                        data-theme="neon"
+                        title="Neon"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-sunset"
+                        data-theme="sunset"
+                        title="Sunset"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-ocean"
+                        data-theme="ocean"
+                        title="Ocean"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-crimson"
+                        data-theme="crimson"
+                        title="Crimson"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-forest"
+                        data-theme="forest"
+                        title="Forest"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-galaxy"
+                        data-theme="galaxy"
+                        title="Galaxy"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-gold"
+                        data-theme="gold"
+                        title="Gold"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-ice"
+                        data-theme="ice"
+                        title="Ice"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-mono"
+                        data-theme="mono"
+                        title="Monochrome"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-rose"
+                        data-theme="rose"
+                        title="Rose"
+                        type="button">
+                    </button>
+
+                    <button
+                        class="theme-swatch swatch-lime"
+                        data-theme="lime"
+                        title="Lime"
+                        type="button">
+                    </button>
+
+                </div>
+
+                <button
+                    id="openProfileButtonSide"
+                    class="profile-open-btn settings-profile-btn"
+                    type="button">
+                    👤 Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- ================= DAILY GOAL ================= -->
+
+            <div class="daily-goal">
+
+                <h3>🔥 Daily Goal</h3>
+
+                <div class="goal-number">
+
+                    <strong id="dailyCompleted">
+                        0
+                    </strong>
+
+                    <span>/ 20 sentences</span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="dailyProgress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+
+                <p id="dailyGoalText">
+                    Complete 20 sentences today.
+                </p>
+
+            </div>
+
+
+            <!-- ================= DAILY STREAK ================= -->
+
+            <div class="daily-streak">
+
+                <h3>🔥 Daily Streak</h3>
+
+                <strong id="dailyStreak">
+                    0
+                </strong>
+
+                <span>days</span>
+
+            </div>
+
+
+            <!-- ================= PROGRESS ================= -->
+
+            <div class="progress-section">
+
+                <h3>Progress</h3>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+                <p>
+
+                    Sentence
+
+                    <span id="sentenceNumber">
+                        1
+                    </span>
+
+                    /
+
+                    <span id="totalSentences">
+                        10
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= WEEKLY REPORT ================= -->
+
+            <div class="weekly-report">
+
+                <h3>📅 Weekly Report</h3>
+
+                <div
+                    id="weeklyChart"
+                    class="weekly-chart">
+                </div>
+
+                <p
+                    id="weeklySummary"
+                    class="weekly-summary">
+                    0 sentences this week
+                </p>
+
+            </div>
+
+
+            <!-- ================= LEADERBOARD ================= -->
+
+            <div class="leaderboard-card">
+
+                <h3>🏆 Leaderboard</h3>
+
+                <p class="leaderboard-subtitle">
+                    Your top 5 finished runs
+                </p>
+
+                <div
+                    id="leaderboardList"
+                    class="leaderboard-list">
+
+                    <div class="leaderboard-empty">
+                        Finish a full test to enter the leaderboard.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CENTER PANEL ================= -->
+
+        <section class="main-panel">
+
+
+            <!-- ================= TOP STATS ================= -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <span>WPM</span>
+
+                    <strong id="wpm">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Accuracy</span>
+
+                    <strong id="accuracy">
+                        100%
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Streak</span>
+
+                    <strong id="streak">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Time</span>
+
+                    <strong id="timer">
+                        00:00:00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BIG STATS ================= -->
+
+            <div class="big-stats">
+
+                <div>
+
+                    <span>Speed</span>
+
+                    <strong id="bigWpm">
+                        0
+                    </strong>
+
+                    <small>
+                        WPM
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <span>Current Streak</span>
+
+                    <strong id="bigStreak">
+                        0
+                    </strong>
+
+                    <small>
+                        characters
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LEVEL ================= -->
+
+            <div class="level-display">
+
+                <span>
+                    Level
+                </span>
+
+                <strong id="level">
+                    1
+                </strong>
+
+                <small id="levelDifficulty">
+                    Beginner
+                </small>
+
+            </div>
+
+
+            <!-- ================= TYPING AREA ================= -->
+
+            <div
+                class="sentence-box"
+                id="sentenceBox">
+
+                <div
+                    id="text"
+                    class="typing-text">
+                </div>
+
+
+                <input
+                    type="text"
+                    id="input"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false">
+
+            </div>
+
+
+            <!-- ================= TYPING STATUS ================= -->
+
+            <div
+                id="challenge"
+                class="challenge">
+
+                Start typing to begin your challenge.
+
+            </div>
+
+
+            <!-- ================= RESTART ================= -->
+
+            <button
+                class="restart-btn"
+                id="restartButton">
+
+                🔄 Restart Test
+
+            </button>
+
+
+            <!-- ================= VIRTUAL KEYBOARD ================= -->
+
+            <div
+                class="virtual-keyboard"
+                id="virtualKeyboard">
+
+                <div class="kb-row">
+                    <div class="kb-key" data-key="`">`</div>
+                    <div class="kb-key" data-key="1">1</div>
+                    <div class="kb-key" data-key="2">2</div>
+                    <div class="kb-key" data-key="3">3</div>
+                    <div class="kb-key" data-key="4">4</div>
+                    <div class="kb-key" data-key="5">5</div>
+                    <div class="kb-key" data-key="6">6</div>
+                    <div class="kb-key" data-key="7">7</div>
+                    <div class="kb-key" data-key="8">8</div>
+                    <div class="kb-key" data-key="9">9</div>
+                    <div class="kb-key" data-key="0">0</div>
+                    <div class="kb-key" data-key="-">-</div>
+                    <div class="kb-key" data-key="=">=</div>
+                    <div class="kb-key kb-wide" data-key="Backspace">⌫</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-tab" data-key="Tab">Tab</div>
+                    <div class="kb-key" data-key="q">q</div>
+                    <div class="kb-key" data-key="w">w</div>
+                    <div class="kb-key" data-key="e">e</div>
+                    <div class="kb-key" data-key="r">r</div>
+                    <div class="kb-key" data-key="t">t</div>
+                    <div class="kb-key" data-key="y">y</div>
+                    <div class="kb-key" data-key="u">u</div>
+                    <div class="kb-key" data-key="i">i</div>
+                    <div class="kb-key" data-key="o">o</div>
+                    <div class="kb-key" data-key="p">p</div>
+                    <div class="kb-key" data-key="[">[</div>
+                    <div class="kb-key" data-key="]">]</div>
+                    <div class="kb-key kb-backslash" data-key="\">\</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-caps" data-key="CapsLock">Caps</div>
+                    <div class="kb-key" data-key="a">a</div>
+                    <div class="kb-key" data-key="s">s</div>
+                    <div class="kb-key" data-key="d">d</div>
+                    <div class="kb-key" data-key="f">f</div>
+                    <div class="kb-key" data-key="g">g</div>
+                    <div class="kb-key" data-key="h">h</div>
+                    <div class="kb-key" data-key="j">j</div>
+                    <div class="kb-key" data-key="k">k</div>
+                    <div class="kb-key" data-key="l">l</div>
+                    <div class="kb-key" data-key=";">;</div>
+                    <div class="kb-key" data-key="'">'</div>
+                    <div class="kb-key kb-enter" data-key="Enter">Enter</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-shift" data-key="Shift">Shift</div>
+                    <div class="kb-key" data-key="z">z</div>
+                    <div class="kb-key" data-key="x">x</div>
+                    <div class="kb-key" data-key="c">c</div>
+                    <div class="kb-key" data-key="v">v</div>
+                    <div class="kb-key" data-key="b">b</div>
+                    <div class="kb-key" data-key="n">n</div>
+                    <div class="kb-key" data-key="m">m</div>
+                    <div class="kb-key" data-key=",">,</div>
+                    <div class="kb-key" data-key=".">.</div>
+                    <div class="kb-key" data-key="/">/</div>
+                    <div class="kb-key kb-shift" data-key="Shift">Shift</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-space" data-key=" ">Space</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RIGHT PANEL ================= -->
+
+        <aside class="side-panel right-panel">
+
+            <h2>⚡ TypeRush</h2>
+
+
+            <!-- SPEED -->
+
+            <div class="info-card speed-card">
+
+                <h3>⚡ Speed</h3>
+
+                <p>
+                    Try to reach
+                    <strong>40 WPM</strong>
+                </p>
+
+            </div>
+
+
+            <!-- STREAK -->
+
+            <div class="info-card streak-card">
+
+                <h3>🔥 Streak</h3>
+
+                <p>
+                    Type correctly to build your streak.
+                </p>
+
+            </div>
+
+
+            <!-- CHALLENGE -->
+
+            <div class="info-card challenge-card">
+
+                <h3>🎯 Challenge</h3>
+
+                <p>
+                    Maintain at least
+                    <strong>90%</strong> accuracy.
+                </p>
+
+            </div>
+
+
+            <!-- TIP -->
+
+            <div class="info-card tip-card">
+
+                <h3>💡 Tip</h3>
+
+                <p>
+                    Focus on accuracy first.
+                    Speed will come naturally.
+                </p>
+
+            </div>
+
+
+            <!-- CURRENT STREAK -->
+
+            <div class="info-card current-streak-card">
+
+                <h3>🔥 Current Streak</h3>
+
+                <p>
+
+                    <strong id="rightCurrentStreak">
+                        0
+                    </strong>
+
+                    correct characters
+
+                </p>
+
+                <p>
+                    Best Streak:
+                    <strong id="rightBestStreak">
+                        0
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- CURRENT TEST -->
+
+            <div class="info-card current-test-card">
+
+                <h3>📝 Current Test</h3>
+
+                <p>
+
+                    Sentence
+
+                    <strong id="rightCurrentTest">
+                        1 / 10
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= LEVEL ROADMAP ================= -->
+
+            <div class="level-roadmap">
+
+                <h3>🧩 Level Roadmap</h3>
+
+                <div
+                    class="level-scroll"
+                    id="levelScroll">
+
+
+                    <div
+                        class="level-card"
+                        data-level="1">
+
+                        <div class="level-card-image">
+                            🌱
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 1</strong>
+
+                            <span>Beginner</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            ▶
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="2">
+
+                        <div class="level-card-image">
+                            📘
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 2</strong>
+
+                            <span>Easy</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="3">
+
+                        <div class="level-card-image">
+                            ⚡
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 3</strong>
+
+                            <span>Normal</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="4">
+
+                        <div class="level-card-image">
+                            🔥
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 4</strong>
+
+                            <span>Intermediate</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="5">
+
+                        <div class="level-card-image">
+                            🚀
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 5</strong>
+
+                            <span>Advanced</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="6">
+
+                        <div class="level-card-image">
+                            💎
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 6</strong>
+
+                            <span>Expert</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="7">
+
+                        <div class="level-card-image">
+                            👑
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 7</strong>
+
+                            <span>Master</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="8">
+
+                        <div class="level-card-image">
+                            🏆
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 8</strong>
+
+                            <span>Legend</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="9">
+
+                        <div class="level-card-image">
+                            🌌
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 9</strong>
+
+                            <span>Grandmaster</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="level-card"
+                        data-level="10">
+
+                        <div class="level-card-image">
+                            ♾️
+                        </div>
+
+                        <div class="level-card-info">
+
+                            <strong>Level 10</strong>
+
+                            <span>Immortal</span>
+
+                        </div>
+
+                        <div class="level-status">
+                            🔒
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BEST SCORE -->
+
+            <div class="info-card best-card">
+
+                <h3>🏅 Best Performance</h3>
+
+                <p>
+                    Best WPM:
+                    <strong id="rightBestWpm">
+                        0
+                    </strong>
+                </p>
+
+                <p>
+                    Tests:
+                    <strong id="rightTotalTests">
+                        0
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- ================= YOUR PROGRESS ================= -->
+
+            <div class="info-card progress-card">
+
+                <h3>📈 Your Progress</h3>
+
+                <div
+                    id="progressChart"
+                    class="progress-chart">
+
+                    <p class="progress-empty">
+                        Finish a couple of tests to see your trend.
+                    </p>
+
+                </div>
+
+                <p
+                    id="progressTrend"
+                    class="progress-trend-text">
+                    Speed, accuracy and achievements combined.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ================= ACHIEVEMENT POPUP ================= -->
+
+    <div
+        id="achievementPopup"
+        class="achievement-popup">
+
+        <div class="popup-box">
+
+            <div class="popup-icon">
+                🏆
+            </div>
+
+            <h2>
+                Achievement Unlocked!
+            </h2>
+
+            <p id="achievementName">
+                Achievement
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <div
+        id="results"
+        class="results-overlay">
+
+        <div class="results-box">
+
+
+            <h1>
+                🏆 Test Complete!
+            </h1>
+
+
+            <p class="results-subtitle">
+                Great job! Here are your final results.
+            </p>
+
+
+            <div class="results-stats">
+
+
+                <div class="result-card">
+
+                    <span>
+                        WPM
+                    </span>
+
+                    <strong id="finalWpm">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                    <strong id="finalAccuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Highest Streak
+                    </span>
+
+                    <strong id="finalStreak">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Characters
+                    </span>
+
+                    <strong id="finalCharacters">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Time
+                    </span>
+
+                    <strong id="finalTime">
+                        00:00:00
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Daily Goal
+                    </span>
+
+                    <strong id="finalDailyGoal">
+                        0 / 20
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <h2 id="performanceMessage">
+                Keep practicing!
+            </h2>
+
+
+            <button
+                class="try-again-btn"
+                id="tryAgainButton">
+
+                🔄 Try Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PLAYER PROFILE MODAL ================= -->
+
+    <div
+        id="profileModal"
+        class="profile-modal-overlay">
+
+        <div class="profile-modal-box">
+
+            <button
+                id="closeProfileButton"
+                class="profile-close-btn"
+                type="button">
+                ✕
+            </button>
+
+            <h2>👤 Player Profile</h2>
+
+            <div class="profile-avatar-row">
+
+                <div class="profile-avatar-wrap">
+
+                    <img
+                        id="profileAvatarPreview"
+                        class="profile-avatar-preview"
+                        alt="Player avatar">
+
+                    <label
+                        for="profileAvatarInput"
+                        class="profile-avatar-edit"
+                        title="Change photo">
+                        ✎
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profileAvatarInput"
+                        accept="image/*"
+                        hidden>
+
+                </div>
+
+                <div class="profile-name-wrap">
+
+                    <label for="profileNameInput">
+                        Display Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profileNameInput"
+                        maxlength="24"
+                        placeholder="Type your name">
+
+                    <span
+                        id="profileEmailDisplay"
+                        class="profile-email">
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="profile-stats-grid">
+
+                <div class="profile-stat">
+                    <span>Level</span>
+                    <strong id="profileLevel">1</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Best WPM</span>
+                    <strong id="profileBestWpm">0</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Best Streak</span>
+                    <strong id="profileBestStreak">0</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Tests Completed</span>
+                    <strong id="profileTotalTests">0</strong>
+                </div>
+
+            </div>
+
+            <p class="profile-hint">
+                Your name and photo are saved on this device.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
