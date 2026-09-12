@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PheonixType - Typing Practice</title>
+
+   <meta name="description" content="Free online typing practice to improve your typing speed and accuracy. Take typing tests and improve your WPM.">
+
+   <meta name="keywords" content="typing practice, typing test, typing speed test, online typing practice, WPM test">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Fira+Code:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Source+Code+Pro:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=Space+Mono:wght@400;700&family=Inconsolata:wght@400;700&family=Courier+Prime:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=Poppins:wght@400;600&family=Montserrat:wght@400;600&family=Nunito:wght@400;700&family=Quicksand:wght@400;600&family=Raleway:wght@400;600&family=Rubik:wght@400;600&family=Work+Sans:wght@400;600&family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Inter:wght@400;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;600&family=Lora:wght@400;600&family=PT+Serif:wght@400;700&family=Crimson+Text:wght@400;600&family=EB+Garamond:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Noto+Serif:wght@400;600&family=Roboto+Slab:wght@400;600&family=Bitter:wght@400;600&family=Oswald:wght@400;600&family=Bebas+Neue&family=Anton&family=Archivo:wght@400;600&family=Barlow:wght@400;600&family=Cabin:wght@400;600&family=Karla:wght@400;600&family=Manrope:wght@400;600&family=Mulish:wght@400;600&family=DM+Sans:wght@400;600&family=Josefin+Sans:wght@400;600&family=Comfortaa:wght@400;600&family=Dancing+Script:wght@400;600&family=Pacifico&family=Caveat:wght@400;600&family=Indie+Flower&family=Shadows+Into+Light&family=Permanent+Marker&family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= INTRO / SPLASH SCREEN ================= -->
+
+    <div
+        id="introScreen"
+        class="intro-screen">
+
+        <!-- SITE NAME BADGE -->
+        <div class="intro-site-badge">
+            PHEONIX TYPE
+        </div>
+
+        <!-- FLOATING CLOUDS -->
+        <div class="intro-clouds" aria-hidden="true">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+        </div>
+
+        <div class="intro-content">
+
+            <div
+                class="intro-image"
+                id="introImage">
+
+                <!-- REALISTIC PHOENIX -->
+                <svg
+                    class="phoenix-svg"
+                    viewBox="0 0 200 200"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Phoenix bird">
+
+                    <defs>
+                        <radialGradient id="phoenixBody" cx="45%" cy="35%" r="70%">
+                            <stop offset="0%" stop-color="#ffe29a"/>
+                            <stop offset="35%" stop-color="#ff9a3c"/>
+                            <stop offset="70%" stop-color="#ff5722"/>
+                            <stop offset="100%" stop-color="#c62828"/>
+                        </radialGradient>
+                        <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffcc66"/>
+                            <stop offset="45%" stop-color="#ff7a1a"/>
+                            <stop offset="100%" stop-color="#b71c1c"/>
+                        </linearGradient>
+                        <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffd54f"/>
+                            <stop offset="50%" stop-color="#ff6f00"/>
+                            <stop offset="100%" stop-color="#d84315"/>
+                        </linearGradient>
+                    </defs>
+
+                    <g class="phoenix-tail">
+                        <path d="M100 120 C 70 150, 40 175, 15 195 C 45 185, 70 175, 92 150 Z" fill="url(#tailGrad)"/>
+                        <path d="M100 122 C 90 160, 80 185, 68 198 C 90 190, 105 172, 108 145 Z" fill="url(#tailGrad)" opacity="0.85"/>
+                        <path d="M104 120 C 120 155, 140 178, 165 193 C 138 180, 115 168, 100 142 Z" fill="url(#tailGrad)" opacity="0.9"/>
+                    </g>
+
+                    <g class="phoenix-wing phoenix-wing-left">
+                        <path d="M96 95 C 55 85, 20 70, 4 40 C 30 55, 55 62, 80 78 C 65 60, 55 45, 52 25 C 75 45, 92 65, 100 90 Z" fill="url(#wingGrad)"/>
+                    </g>
+
+                    <g class="phoenix-wing phoenix-wing-right">
+                        <path d="M104 95 C 145 85, 180 70, 196 40 C 170 55, 145 62, 120 78 C 135 60, 145 45, 148 25 C 125 45, 108 65, 100 90 Z" fill="url(#wingGrad)"/>
+                    </g>
+
+                    <ellipse cx="100" cy="98" rx="26" ry="34" fill="url(#phoenixBody)"/>
+
+                    <circle cx="100" cy="58" r="17" fill="url(#phoenixBody)"/>
+
+                    <path d="M100 42 C 96 28, 90 20, 82 14 C 92 16, 100 22, 104 34 Z" fill="#ffd54f"/>
+                    <path d="M104 40 C 108 24, 116 15, 126 10 C 116 16, 110 26, 108 38 Z" fill="#ff7043"/>
+
+                    <path d="M115 58 L 130 61 L 115 65 Z" fill="#ffca28"/>
+
+                    <circle cx="106" cy="55" r="2.6" fill="#2b0f00"/>
+
+                </svg>
+
+            </div>
+
+            <div
+                id="introText"
+                class="intro-text">
+
+                <h1 class="intro-title">
+                    Pheonix Type
+                </h1>
+
+                <p class="intro-subtitle">
+                    Improve your typing speed and accuracy
+                </p>
+
+                <p
+                    id="introMotivation"
+                    class="intro-motivation">
+                </p>
+
+                <button
+                    id="introContinueButton"
+                    class="intro-continue-btn">
+                    Continue →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LEVEL SELECT SCREEN ================= -->
+
+    <div
+        id="levelSelectScreen"
+        class="level-select-screen">
+
+        <!-- LEVELS CARD: heading/subtitle stay put, only the grid scrolls -->
+
+        <div class="level-select-panel level-select-panel-levels">
+
+            <div class="level-select-panel-header">
+
+                <h1 class="level-select-title">
+                    Choose Your Level
+                </h1>
+
+                <p class="level-select-subtitle">
+                    Pick any unlocked level to continue. Locked levels open once
+                    you complete the one before them.
+                </p>
+
+            </div>
+
+            <div class="level-select-panel-body">
+
+                <div
+                    id="levelSelectGrid"
+                    class="level-select-grid">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRACTICE MODE CATEGORIES ================= -->
+        <!-- MODES CARD: heading/subtitle stay put, only the grid scrolls -->
+
+        <div class="level-select-panel level-select-panel-modes">
+
+            <div class="level-select-panel-header">
+
+                <h2 class="level-select-modes-title">
+                    ⚡ Practice Modes
+                </h2>
+
+                <p class="level-select-modes-subtitle">
+                    Jump into a quick challenge using your current level's
+                    sentences — no need to finish every level in order.
+                </p>
+
+            </div>
+
+            <div class="level-select-panel-body">
+
+                <div
+                    id="modeSelectGrid"
+                    class="mode-select-grid">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <main class="container" id="appContainer">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="logo">
+                Pheonix Type
+            </div>
+
+            <p class="subtitle">
+                Improve your typing speed and accuracy
+            </p>
+
+            <!-- ================= ACCOUNT / PROFILE ================= -->
+
+            <div
+                class="auth-bar"
+                id="authBar">
+
+                <button
+                    id="openProfileButton"
+                    class="profile-open-btn"
+                    type="button">
+                    👤 My Profile
+                </button>
+
+            </div>
+
+            <!-- ================= PLAYER SUMMARY ================= -->
+
+            <div class="top-summary">
+
+                <!-- CURRENT LEVEL -->
+
+                <div class="top-summary-card current-level-top">
+
+                    <div
+                        class="top-level-icon"
+                        id="levelImage">
+                        🌱
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Current Level</span>
+
+                        <strong id="topLevelName">
+                            Level 1 — Beginner
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST WPM -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        🏆
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Best WPM</span>
+
+                        <strong id="bestWpm">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST STREAK -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        🔥
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Best Streak</span>
+
+                        <strong id="bestStreakTop">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL TESTS -->
+
+                <div class="top-summary-card">
+
+                    <div class="top-summary-icon">
+                        📝
+                    </div>
+
+                    <div class="top-summary-info">
+
+                        <span>Tests Completed</span>
+
+                        <strong id="totalTestsCompleted">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <aside class="side-panel left-panel">
+
+            <h2>🏆 Achievements</h2>
+
+            <div class="achievement-summary">
+
+                <strong id="achievementCount">
+                    0
+                </strong>
+
+                <span>/ 100 Unlocked</span>
+
+            </div>
+
+
+            <div
+                id="achievementList"
+                class="achievement-list">
+
+                <div class="achievement locked">
+                    🔒 Achievements unlock after 5 sentences
+                </div>
+
+            </div>
+
+
+            <!-- ================= CUSTOMIZE / THEME ================= -->
+
+            <div class="settings-card">
+
+                <h3>🎨 Customize</h3>
+
+                <p class="settings-label">
+                    Keyboard theme &amp; typing font
+                </p>
+
+                <div class="customize-actions">
+
+                    <button
+                        id="openThemeModalButton"
+                        class="customize-open-btn"
+                        type="button">
+                        <span class="customize-open-btn-icon">🎨</span>
+                        <span class="customize-open-btn-text">
+                            Themes
+                            <small id="activeThemeLabel">Classic</small>
+                        </span>
+                        <span
+                            id="activeThemePreview"
+                            class="customize-open-btn-preview swatch-classic">
+                        </span>
+                    </button>
+
+                    <button
+                        id="openFontModalButton"
+                        class="customize-open-btn"
+                        type="button">
+                        <span class="customize-open-btn-icon">🔤</span>
+                        <span class="customize-open-btn-text">
+                            Fonts
+                            <small id="activeFontLabel">Classic</small>
+                        </span>
+                        <span class="customize-open-btn-preview customize-open-btn-preview-font">
+                            Aa
+                        </span>
+                    </button>
+
+                    <button
+                        id="openKeyboardStyleModalButton"
+                        class="customize-open-btn"
+                        type="button">
+                        <span class="customize-open-btn-icon">⌨️</span>
+                        <span class="customize-open-btn-text">
+                            Keyboard Styles
+                            <small id="activeKbStyleLabel">Classic</small>
+                        </span>
+                        <span class="customize-open-btn-preview customize-open-btn-preview-kb">
+                            ⌨
+                        </span>
+                    </button>
+
+                </div>
+
+                <button
+                    id="openProfileButtonSide"
+                    class="profile-open-btn settings-profile-btn"
+                    type="button">
+                    👤 Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- ================= DAILY GOAL ================= -->
+
+            <div class="daily-goal">
+
+                <h3>🔥 Daily Goal</h3>
+
+                <div class="goal-number">
+
+                    <strong id="dailyCompleted">
+                        0
+                    </strong>
+
+                    <span>/ 20 sentences</span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="dailyProgress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+
+                <p id="dailyGoalText">
+                    Complete 20 sentences today.
+                </p>
+
+            </div>
+
+
+            <!-- ================= DAILY STREAK ================= -->
+
+            <div class="daily-streak">
+
+                <h3>🔥 Daily Streak</h3>
+
+                <strong id="dailyStreak">
+                    0
+                </strong>
+
+                <span>days</span>
+
+            </div>
+
+
+            <!-- ================= PROGRESS ================= -->
+
+            <div class="progress-section">
+
+                <h3>Progress</h3>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+                <p>
+
+                    Sentence
+
+                    <span id="sentenceNumber">
+                        1
+                    </span>
+
+                    /
+
+                    <span id="totalSentences">
+                        10
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= WEEKLY REPORT ================= -->
+
+            <div class="weekly-report">
+
+                <h3>📅 Weekly Report</h3>
+
+                <div
+                    id="weeklyChart"
+                    class="weekly-chart">
+                </div>
+
+                <p
+                    id="weeklySummary"
+                    class="weekly-summary">
+                    0 sentences this week
+                </p>
+
+            </div>
+
+
+            <!-- ================= LEADERBOARD ================= -->
+
+            <div class="leaderboard-card">
+
+                <h3>🏆 Leaderboard</h3>
+
+                <p class="leaderboard-subtitle">
+                    Best run per player, ranked
+                </p>
+
+                <div
+                    id="leaderboardList"
+                    class="leaderboard-list">
+
+                    <div class="leaderboard-empty">
+                        Finish a full test to enter the leaderboard.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CENTER PANEL ================= -->
+
+        <section class="main-panel">
+
+            <!-- ================= MAXIMIZE / MINIMIZE (MIDDLE CARD ONLY) ================= -->
+
+            <button
+                type="button"
+                id="mainPanelToggleButton"
+                class="main-panel-toggle-btn"
+                title="Maximize">
+                ⛶
+            </button>
+
+
+            <!-- ================= TOP STATS ================= -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <span>WPM</span>
+
+                    <strong id="wpm">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Accuracy</span>
+
+                    <strong id="accuracy">
+                        100%
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Streak</span>
+
+                    <strong id="streak">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Time</span>
+
+                    <strong id="timer">
+                        00:00:00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BIG STATS ================= -->
+
+            <div class="big-stats">
+
+                <div>
+
+                    <span>Speed</span>
+
+                    <strong id="bigWpm">
+                        0
+                    </strong>
+
+                    <small>
+                        WPM
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <span>Current Streak</span>
+
+                    <strong id="bigStreak">
+                        0
+                    </strong>
+
+                    <small>
+                        characters
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LEVEL ================= -->
+
+            <div class="level-display">
+
+                <span>
+                    Level
+                </span>
+
+                <strong id="level">
+                    1
+                </strong>
+
+                <small id="levelDifficulty">
+                    Beginner
+                </small>
+
+            </div>
+
+
+            <!-- ================= TYPING AREA ================= -->
+
+            <div
+                class="sentence-box"
+                id="sentenceBox">
+
+                <div
+                    id="text"
+                    class="typing-text">
+                </div>
+
+
+                <input
+                    type="text"
+                    id="input"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false">
+
+            </div>
+
+
+            <!-- ================= TYPING STATUS ================= -->
+
+            <div
+                id="challenge"
+                class="challenge">
+
+                Start typing to begin your challenge.
+
+            </div>
+
+
+            <!-- ================= VIRTUAL KEYBOARD ================= -->
+
+            <div
+                class="virtual-keyboard"
+                id="virtualKeyboard">
+
+                <div class="kb-row">
+                    <div class="kb-key" data-key="`">`</div>
+                    <div class="kb-key" data-key="1">1</div>
+                    <div class="kb-key" data-key="2">2</div>
+                    <div class="kb-key" data-key="3">3</div>
+                    <div class="kb-key" data-key="4">4</div>
+                    <div class="kb-key" data-key="5">5</div>
+                    <div class="kb-key" data-key="6">6</div>
+                    <div class="kb-key" data-key="7">7</div>
+                    <div class="kb-key" data-key="8">8</div>
+                    <div class="kb-key" data-key="9">9</div>
+                    <div class="kb-key" data-key="0">0</div>
+                    <div class="kb-key" data-key="-">-</div>
+                    <div class="kb-key" data-key="=">=</div>
+                    <div class="kb-key kb-wide" data-key="Backspace">⌫</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-tab" data-key="Tab">Tab</div>
+                    <div class="kb-key" data-key="q">q</div>
+                    <div class="kb-key" data-key="w">w</div>
+                    <div class="kb-key" data-key="e">e</div>
+                    <div class="kb-key" data-key="r">r</div>
+                    <div class="kb-key" data-key="t">t</div>
+                    <div class="kb-key" data-key="y">y</div>
+                    <div class="kb-key" data-key="u">u</div>
+                    <div class="kb-key" data-key="i">i</div>
+                    <div class="kb-key" data-key="o">o</div>
+                    <div class="kb-key" data-key="p">p</div>
+                    <div class="kb-key" data-key="[">[</div>
+                    <div class="kb-key" data-key="]">]</div>
+                    <div class="kb-key kb-backslash" data-key="\">\</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-caps" data-key="CapsLock">Caps</div>
+                    <div class="kb-key" data-key="a">a</div>
+                    <div class="kb-key" data-key="s">s</div>
+                    <div class="kb-key" data-key="d">d</div>
+                    <div class="kb-key" data-key="f">f</div>
+                    <div class="kb-key" data-key="g">g</div>
+                    <div class="kb-key" data-key="h">h</div>
+                    <div class="kb-key" data-key="j">j</div>
+                    <div class="kb-key" data-key="k">k</div>
+                    <div class="kb-key" data-key="l">l</div>
+                    <div class="kb-key" data-key=";">;</div>
+                    <div class="kb-key" data-key="'">'</div>
+                    <div class="kb-key kb-enter" data-key="Enter">Enter</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-shift" data-key="Shift">Shift</div>
+                    <div class="kb-key" data-key="z">z</div>
+                    <div class="kb-key" data-key="x">x</div>
+                    <div class="kb-key" data-key="c">c</div>
+                    <div class="kb-key" data-key="v">v</div>
+                    <div class="kb-key" data-key="b">b</div>
+                    <div class="kb-key" data-key="n">n</div>
+                    <div class="kb-key" data-key="m">m</div>
+                    <div class="kb-key" data-key=",">,</div>
+                    <div class="kb-key" data-key=".">.</div>
+                    <div class="kb-key" data-key="/">/</div>
+                    <div class="kb-key kb-shift" data-key="Shift">Shift</div>
+                </div>
+
+                <div class="kb-row">
+                    <div class="kb-key kb-space" data-key=" ">Space</div>
+                </div>
+
+            </div>
+
+
+            <!-- ================= RESTART ================= -->
+
+            <button
+                class="restart-btn"
+                id="restartButton">
+
+                🔄 Restart Test
+
+            </button>
+
+
+            <!-- ================= BACK TO LEVEL / MODE SELECT ================= -->
+
+            <button
+                type="button"
+                id="backToSelectButton"
+                class="back-to-select-btn">
+                ⬅ Change Level / Mode
+            </button>
+
+        </section>
+
+
+        <!-- ================= RIGHT PANEL ================= -->
+
+        <aside class="side-panel right-panel">
+
+            <h2>⚡ TypeRush</h2>
+
+
+            <!-- SPEED -->
+
+            <div class="info-card speed-card">
+
+                <h3>⚡ Speed</h3>
+
+                <p>
+                    Try to reach
+                    <strong>40 WPM</strong>
+                </p>
+
+            </div>
+
+
+            <!-- STREAK -->
+
+            <div class="info-card streak-card">
+
+                <h3>🔥 Streak</h3>
+
+                <p>
+                    Type correctly to build your streak.
+                </p>
+
+            </div>
+
+
+            <!-- CHALLENGE -->
+
+            <div class="info-card challenge-card">
+
+                <h3>🎯 Challenge</h3>
+
+                <p>
+                    Maintain at least
+                    <strong>90%</strong> accuracy.
+                </p>
+
+            </div>
+
+
+            <!-- TIP -->
+
+            <div class="info-card tip-card">
+
+                <h3>💡 Tip</h3>
+
+                <p>
+                    Focus on accuracy first.
+                    Speed will come naturally.
+                </p>
+
+            </div>
+
+
+            <!-- CURRENT STREAK -->
+
+            <div class="info-card current-streak-card">
+
+                <h3>🔥 Current Streak</h3>
+
+                <p>
+
+                    <strong id="rightCurrentStreak">
+                        0
+                    </strong>
+
+                    correct characters
+
+                </p>
+
+                <p>
+                    Best Streak:
+                    <strong id="rightBestStreak">
+                        0
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- CURRENT TEST -->
+
+            <div class="info-card current-test-card">
+
+                <h3>📝 Current Test</h3>
+
+                <p>
+
+                    Sentence
+
+                    <strong id="rightCurrentTest">
+                        1 / 10
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= LEVEL ROADMAP ================= -->
+
+            <div class="level-roadmap">
+
+                <h3>🧩 Level Roadmap</h3>
+
+                <div
+                    class="level-scroll"
+                    id="levelScroll">
+
+                    <!-- Populated dynamically by populateLevelRoadmap()
+                         in script.js — now covers all 100 levels. -->
+
+                </div>
+
+            </div>
+
+
+            <!-- BEST SCORE -->
+
+            <div class="info-card best-card">
+
+                <h3>🏅 Best Performance</h3>
+
+                <p>
+                    Best WPM:
+                    <strong id="rightBestWpm">
+                        0
+                    </strong>
+                </p>
+
+                <p>
+                    Tests:
+                    <strong id="rightTotalTests">
+                        0
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- ================= MONTHLY REPORT ================= -->
+
+            <div class="info-card progress-card">
+
+                <h3>📅 Monthly Report</h3>
+
+                <div class="monthly-report-header">
+
+                    <span id="monthlyReportLabel">
+                        Month Year
+                    </span>
+
+                </div>
+
+                <div
+                    id="progressChart"
+                    class="progress-chart">
+                </div>
+
+                <p
+                    id="progressTrend"
+                    class="progress-trend-text">
+                    Green = completed, red = missed.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ================= ACHIEVEMENT POPUP ================= -->
+
+    <div
+        id="achievementPopup"
+        class="achievement-popup">
+
+        <div class="popup-box">
+
+            <div class="popup-icon">
+                🏆
+            </div>
+
+            <h2>
+                Achievement Unlocked!
+            </h2>
+
+            <p id="achievementName">
+                Achievement
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <div
+        id="results"
+        class="results-overlay">
+
+        <div class="results-box">
+
+
+            <h1>
+                🏆 Test Complete!
+            </h1>
+
+
+            <p class="results-subtitle">
+                Great job! Here are your final results.
+            </p>
+
+
+            <div class="results-stats">
+
+
+                <div class="result-card">
+
+                    <span>
+                        WPM
+                    </span>
+
+                    <strong id="finalWpm">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                    <strong id="finalAccuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Highest Streak
+                    </span>
+
+                    <strong id="finalStreak">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Characters
+                    </span>
+
+                    <strong id="finalCharacters">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Time
+                    </span>
+
+                    <strong id="finalTime">
+                        00:00:00
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Daily Goal
+                    </span>
+
+                    <strong id="finalDailyGoal">
+                        0 / 20
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <h2 id="performanceMessage">
+                Keep practicing!
+            </h2>
+
+
+            <button
+                class="try-again-btn"
+                id="tryAgainButton">
+
+                🔄 Try Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PLAYER PROFILE MODAL ================= -->
+
+    <div
+        id="profileModal"
+        class="profile-modal-overlay">
+
+        <div class="profile-modal-box">
+
+            <button
+                id="closeProfileButton"
+                class="profile-close-btn"
+                type="button">
+                ✕
+            </button>
+
+            <h2>👤 Player Profile</h2>
+
+            <div class="profile-avatar-row">
+
+                <div class="profile-avatar-wrap">
+
+                    <img
+                        id="profileAvatarPreview"
+                        class="profile-avatar-preview"
+                        alt="Player avatar">
+
+                    <label
+                        for="profileAvatarInput"
+                        class="profile-avatar-edit"
+                        title="Change photo">
+                        ✎
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profileAvatarInput"
+                        accept="image/*"
+                        hidden>
+
+                </div>
+
+                <div class="profile-name-wrap">
+
+                    <label for="profileNameInput">
+                        Display Name
+                    </label>
+
+                    <div class="profile-name-input-row">
+
+                        <input
+                            type="text"
+                            id="profileNameInput"
+                            maxlength="24"
+                            placeholder="Type your name"
+                            readonly>
+
+                        <button
+                            type="button"
+                            id="profileNameEditButton"
+                            class="profile-name-btn profile-name-edit-btn"
+                            title="Edit name">
+                            ✎ Edit
+                        </button>
+
+                        <button
+                            type="button"
+                            id="profileNameSaveButton"
+                            class="profile-name-btn profile-name-save-btn"
+                            title="Save name">
+                            💾 Save
+                        </button>
+
+                    </div>
+
+                    <span
+                        id="profileEmailDisplay"
+                        class="profile-email">
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="profile-stats-grid">
+
+                <div class="profile-stat">
+                    <span>Level</span>
+                    <strong id="profileLevel">1</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Best WPM</span>
+                    <strong id="profileBestWpm">0</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Best Streak</span>
+                    <strong id="profileBestStreak">0</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Tests Completed</span>
+                    <strong id="profileTotalTests">0</strong>
+                </div>
+
+                <div class="profile-stat">
+                    <span>Total Time Spent</span>
+                    <strong id="profileTotalTime">00:00:00</strong>
+                </div>
+
+            </div>
+
+            <p class="profile-hint">
+                Your name and photo are saved on this device.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= KEYBOARD THEME PICKER MODAL ================= -->
+
+    <div
+        id="themeModal"
+        class="picker-modal-overlay">
+
+        <div class="picker-modal-box">
+
+            <button
+                id="closeThemeModalButton"
+                class="profile-close-btn"
+                type="button">
+                ✕
+            </button>
+
+            <h2>🎨 Keyboard Themes</h2>
+
+            <p class="picker-modal-subtitle">
+                Pick an accent &amp; keyboard color theme. It applies instantly.
+            </p>
+
+            <div
+                id="themeSwatches"
+                class="theme-swatches">
+
+                <button class="theme-swatch swatch-classic active" data-theme="classic" title="Classic" type="button"></button>
+                <button class="theme-swatch swatch-neon" data-theme="neon" title="Neon" type="button"></button>
+                <button class="theme-swatch swatch-sunset" data-theme="sunset" title="Sunset" type="button"></button>
+                <button class="theme-swatch swatch-ocean" data-theme="ocean" title="Ocean" type="button"></button>
+                <button class="theme-swatch swatch-crimson" data-theme="crimson" title="Crimson" type="button"></button>
+                <button class="theme-swatch swatch-forest" data-theme="forest" title="Forest" type="button"></button>
+                <button class="theme-swatch swatch-galaxy" data-theme="galaxy" title="Galaxy" type="button"></button>
+                <button class="theme-swatch swatch-gold" data-theme="gold" title="Gold" type="button"></button>
+                <button class="theme-swatch swatch-ice" data-theme="ice" title="Ice" type="button"></button>
+                <button class="theme-swatch swatch-mono" data-theme="mono" title="Monochrome" type="button"></button>
+                <button class="theme-swatch swatch-rose" data-theme="rose" title="Rose" type="button"></button>
+                <button class="theme-swatch swatch-lime" data-theme="lime" title="Lime" type="button"></button>
+                <button class="theme-swatch swatch-cyberpunk" data-theme="cyberpunk" title="Cyberpunk" type="button"></button>
+                <button class="theme-swatch swatch-mint" data-theme="mint" title="Mint" type="button"></button>
+                <button class="theme-swatch swatch-lava" data-theme="lava" title="Lava" type="button"></button>
+                <button class="theme-swatch swatch-arctic" data-theme="arctic" title="Arctic" type="button"></button>
+                <button class="theme-swatch swatch-berry" data-theme="berry" title="Berry" type="button"></button>
+                <button class="theme-swatch swatch-amber" data-theme="amber" title="Amber" type="button"></button>
+                <button class="theme-swatch swatch-steel" data-theme="steel" title="Steel" type="button"></button>
+                <button class="theme-swatch swatch-candy" data-theme="candy" title="Candy" type="button"></button>
+                <button class="theme-swatch swatch-sapphire" data-theme="sapphire" title="Sapphire" type="button"></button>
+                <button class="theme-swatch swatch-emerald" data-theme="emerald" title="Emerald" type="button"></button>
+                <button class="theme-swatch swatch-ruby" data-theme="ruby" title="Ruby" type="button"></button>
+                <button class="theme-swatch swatch-topaz" data-theme="topaz" title="Topaz" type="button"></button>
+                <button class="theme-swatch swatch-amethyst" data-theme="amethyst" title="Amethyst" type="button"></button>
+                <button class="theme-swatch swatch-obsidian" data-theme="obsidian" title="Obsidian" type="button"></button>
+                <button class="theme-swatch swatch-coral" data-theme="coral" title="Coral" type="button"></button>
+                <button class="theme-swatch swatch-peach" data-theme="peach" title="Peach" type="button"></button>
+                <button class="theme-swatch swatch-lavender" data-theme="lavender" title="Lavender" type="button"></button>
+                <button class="theme-swatch swatch-slate" data-theme="slate" title="Slate" type="button"></button>
+                <button class="theme-swatch swatch-midnight" data-theme="midnight" title="Midnight" type="button"></button>
+                <button class="theme-swatch swatch-sakura" data-theme="sakura" title="Sakura" type="button"></button>
+                <button class="theme-swatch swatch-autumn" data-theme="autumn" title="Autumn" type="button"></button>
+                <button class="theme-swatch swatch-glacier" data-theme="glacier" title="Glacier" type="button"></button>
+                <button class="theme-swatch swatch-volcano" data-theme="volcano" title="Volcano" type="button"></button>
+                <button class="theme-swatch swatch-jade" data-theme="jade" title="Jade" type="button"></button>
+                <button class="theme-swatch swatch-plum" data-theme="plum" title="Plum" type="button"></button>
+                <button class="theme-swatch swatch-citrus" data-theme="citrus" title="Citrus" type="button"></button>
+                <button class="theme-swatch swatch-storm" data-theme="storm" title="Storm" type="button"></button>
+                <button class="theme-swatch swatch-desert" data-theme="desert" title="Desert" type="button"></button>
+                <button class="theme-swatch swatch-neonblue" data-theme="neonblue" title="Neon Blue" type="button"></button>
+                <button class="theme-swatch swatch-neonpink" data-theme="neonpink" title="Neon Pink" type="button"></button>
+                <button class="theme-swatch swatch-neongreen" data-theme="neongreen" title="Neon Green" type="button"></button>
+                <button class="theme-swatch swatch-copper" data-theme="copper" title="Copper" type="button"></button>
+                <button class="theme-swatch swatch-onyx" data-theme="onyx" title="Onyx" type="button"></button>
+                <button class="theme-swatch swatch-blossom" data-theme="blossom" title="Blossom" type="button"></button>
+                <button class="theme-swatch swatch-tidal" data-theme="tidal" title="Tidal" type="button"></button>
+                <button class="theme-swatch swatch-royal" data-theme="royal" title="Royal" type="button"></button>
+                <button class="theme-swatch swatch-inferno" data-theme="inferno" title="Inferno" type="button"></button>
+                <button class="theme-swatch swatch-frostbite" data-theme="frostbite" title="Frostbite" type="button"></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FONT PICKER MODAL ================= -->
+
+    <div
+        id="fontModal"
+        class="picker-modal-overlay">
+
+        <div class="picker-modal-box">
+
+            <button
+                id="closeFontModalButton"
+                class="profile-close-btn"
+                type="button">
+                ✕
+            </button>
+
+            <h2>🔤 Typing Fonts</h2>
+
+            <p class="picker-modal-subtitle">
+                Pick the font used for the sentence text, your typing input, and the keyboard.
+            </p>
+
+            <div
+                id="fontSwatches"
+                class="font-swatches">
+
+                <button class="font-swatch active" data-font="classic" style="font-family: 'Times New Roman', Times, serif;" type="button">Classic</button>
+                <button class="font-swatch" data-font="robotomono" style="font-family: 'Roboto Mono', monospace;" type="button">Roboto Mono</button>
+                <button class="font-swatch" data-font="firacode" style="font-family: 'Fira Code', monospace;" type="button">Fira Code</button>
+                <button class="font-swatch" data-font="jetbrainsmono" style="font-family: 'JetBrains Mono', monospace;" type="button">JetBrains Mono</button>
+                <button class="font-swatch" data-font="sourcecodepro" style="font-family: 'Source Code Pro', monospace;" type="button">Source Code Pro</button>
+                <button class="font-swatch" data-font="ibmplexmono" style="font-family: 'IBM Plex Mono', monospace;" type="button">IBM Plex Mono</button>
+                <button class="font-swatch" data-font="spacemono" style="font-family: 'Space Mono', monospace;" type="button">Space Mono</button>
+                <button class="font-swatch" data-font="inconsolata" style="font-family: 'Inconsolata', monospace;" type="button">Inconsolata</button>
+                <button class="font-swatch" data-font="courierprime" style="font-family: 'Courier Prime', monospace;" type="button">Courier Prime</button>
+                <button class="font-swatch" data-font="ubuntumono" style="font-family: 'Ubuntu Mono', monospace;" type="button">Ubuntu Mono</button>
+                <button class="font-swatch" data-font="poppins" style="font-family: 'Poppins', sans-serif;" type="button">Poppins</button>
+                <button class="font-swatch" data-font="montserrat" style="font-family: 'Montserrat', sans-serif;" type="button">Montserrat</button>
+                <button class="font-swatch" data-font="nunito" style="font-family: 'Nunito', sans-serif;" type="button">Nunito</button>
+                <button class="font-swatch" data-font="quicksand" style="font-family: 'Quicksand', sans-serif;" type="button">Quicksand</button>
+                <button class="font-swatch" data-font="raleway" style="font-family: 'Raleway', sans-serif;" type="button">Raleway</button>
+                <button class="font-swatch" data-font="rubik" style="font-family: 'Rubik', sans-serif;" type="button">Rubik</button>
+                <button class="font-swatch" data-font="worksans" style="font-family: 'Work Sans', sans-serif;" type="button">Work Sans</button>
+                <button class="font-swatch" data-font="lato" style="font-family: 'Lato', sans-serif;" type="button">Lato</button>
+                <button class="font-swatch" data-font="opensans" style="font-family: 'Open Sans', sans-serif;" type="button">Open Sans</button>
+                <button class="font-swatch" data-font="inter" style="font-family: 'Inter', sans-serif;" type="button">Inter</button>
+                <button class="font-swatch" data-font="merriweather" style="font-family: 'Merriweather', serif;" type="button">Merriweather</button>
+                <button class="font-swatch" data-font="playfairdisplay" style="font-family: 'Playfair Display', serif;" type="button">Playfair Display</button>
+                <button class="font-swatch" data-font="lora" style="font-family: 'Lora', serif;" type="button">Lora</button>
+                <button class="font-swatch" data-font="ptserif" style="font-family: 'PT Serif', serif;" type="button">PT Serif</button>
+                <button class="font-swatch" data-font="crimsontext" style="font-family: 'Crimson Text', serif;" type="button">Crimson Text</button>
+                <button class="font-swatch" data-font="ebgaramond" style="font-family: 'EB Garamond', serif;" type="button">EB Garamond</button>
+                <button class="font-swatch" data-font="librebaskerville" style="font-family: 'Libre Baskerville', serif;" type="button">Libre Baskerville</button>
+                <button class="font-swatch" data-font="notoserif" style="font-family: 'Noto Serif', serif;" type="button">Noto Serif</button>
+                <button class="font-swatch" data-font="robotoslab" style="font-family: 'Roboto Slab', serif;" type="button">Roboto Slab</button>
+                <button class="font-swatch" data-font="bitter" style="font-family: 'Bitter', serif;" type="button">Bitter</button>
+                <button class="font-swatch" data-font="oswald" style="font-family: 'Oswald', sans-serif;" type="button">Oswald</button>
+                <button class="font-swatch" data-font="bebasneue" style="font-family: 'Bebas Neue', sans-serif;" type="button">Bebas Neue</button>
+                <button class="font-swatch" data-font="anton" style="font-family: 'Anton', sans-serif;" type="button">Anton</button>
+                <button class="font-swatch" data-font="archivo" style="font-family: 'Archivo', sans-serif;" type="button">Archivo</button>
+                <button class="font-swatch" data-font="barlow" style="font-family: 'Barlow', sans-serif;" type="button">Barlow</button>
+                <button class="font-swatch" data-font="cabin" style="font-family: 'Cabin', sans-serif;" type="button">Cabin</button>
+                <button class="font-swatch" data-font="karla" style="font-family: 'Karla', sans-serif;" type="button">Karla</button>
+                <button class="font-swatch" data-font="manrope" style="font-family: 'Manrope', sans-serif;" type="button">Manrope</button>
+                <button class="font-swatch" data-font="mulish" style="font-family: 'Mulish', sans-serif;" type="button">Mulish</button>
+                <button class="font-swatch" data-font="dmsans" style="font-family: 'DM Sans', sans-serif;" type="button">DM Sans</button>
+                <button class="font-swatch" data-font="josefinsans" style="font-family: 'Josefin Sans', sans-serif;" type="button">Josefin Sans</button>
+                <button class="font-swatch" data-font="comfortaa" style="font-family: 'Comfortaa', sans-serif;" type="button">Comfortaa</button>
+                <button class="font-swatch" data-font="dancingscript" style="font-family: 'Dancing Script', cursive;" type="button">Dancing Script</button>
+                <button class="font-swatch" data-font="pacifico" style="font-family: 'Pacifico', cursive;" type="button">Pacifico</button>
+                <button class="font-swatch" data-font="caveat" style="font-family: 'Caveat', cursive;" type="button">Caveat</button>
+                <button class="font-swatch" data-font="indieflower" style="font-family: 'Indie Flower', cursive;" type="button">Indie Flower</button>
+                <button class="font-swatch" data-font="shadowsintolight" style="font-family: 'Shadows Into Light', cursive;" type="button">Shadows Into Light</button>
+                <button class="font-swatch" data-font="permanentmarker" style="font-family: 'Permanent Marker', cursive;" type="button">Permanent Marker</button>
+                <button class="font-swatch" data-font="vt323" style="font-family: 'VT323', monospace;" type="button">VT323</button>
+                <button class="font-swatch" data-font="pressstart2p" style="font-family: 'Press Start 2P', monospace;" type="button">Press Start 2P</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ================= KEYBOARD STYLE PICKER MODAL ================= -->
+
+    <div
+        id="keyboardStyleModal"
+        class="picker-modal-overlay">
+
+        <div class="picker-modal-box">
+
+            <button
+                id="closeKeyboardStyleModalButton"
+                class="profile-close-btn"
+                type="button">
+                ✕
+            </button>
+
+            <h2>⌨️ Keyboard Styles</h2>
+
+            <p class="picker-modal-subtitle">
+                Pick a visual style for the on-screen keyboard keys. It applies instantly.
+            </p>
+
+            <div
+                id="kbStyleSwatches"
+                class="kbstyle-swatches">
+
+                <button class="kbstyle-swatch" data-kbstyle="classic" title="Classic" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Classic</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="flatdark" title="Flat Dark" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Flat Dark</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="flatlight" title="Flat Light" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Flat Light</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="glass" title="Glass" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Glass</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="neumorphlight" title="Neumorphic Light" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Neumorphic Light</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="neumorphdark" title="Neumorphic Dark" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Neumorphic Dark</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="retrobeige" title="Retro Beige" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Retro Beige</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="retrocream" title="Retro Cream" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Retro Cream</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="mechblack" title="Mechanical Black" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Mechanical Black</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="mechgrey" title="Mechanical Grey" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Mechanical Grey</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="gamingrgb" title="Gaming RGB" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Gaming RGB</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="wood" title="Wood" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Wood</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="metal" title="Brushed Metal" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Brushed Metal</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="chalkboard" title="Chalkboard" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Chalkboard</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="paper" title="Paper" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Paper</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="neoncyan" title="Neon Cyan" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Neon Cyan</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="neonpink" title="Neon Pink" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Neon Pink</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="neongreen" title="Neon Green" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Neon Green</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="pastelpink" title="Pastel Pink" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Pastel Pink</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="pastelblue" title="Pastel Blue" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Pastel Blue</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="pastelmint" title="Pastel Mint" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Pastel Mint</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="pastellavender" title="Pastel Lavender" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Pastel Lavender</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="bubble" title="Bubble" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Bubble</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="pixelart" title="Pixel Art" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Pixel Art</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="origami" title="Origami" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Origami</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="carbonfiber" title="Carbon Fiber" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Carbon Fiber</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="marble" title="Marble" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Marble</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="leather" title="Leather" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Leather</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="denim" title="Denim" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Denim</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="chrome" title="Chrome" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Chrome</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="goldplated" title="Gold Plated" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Gold Plated</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="rosegold" title="Rose Gold" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Rose Gold</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="copperkey" title="Copper" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Copper</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="bronze" title="Bronze" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Bronze</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="steelblue" title="Steel Blue" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Steel Blue</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="midnightglass" title="Midnight Glass" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Midnight Glass</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="frostedglass" title="Frosted Glass" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Frosted Glass</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="sunsetglass" title="Sunset Glass" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Sunset Glass</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="terminalgreen" title="Terminal Green" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Terminal Green</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="terminalamber" title="Terminal Amber" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Terminal Amber</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="holographic" title="Holographic" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Holographic</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="icecube" title="Ice Cube" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Ice Cube</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="lavarock" title="Lava Rock" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Lava Rock</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="sand" title="Sand" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Sand</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="emeraldgem" title="Emerald Gem" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Emerald Gem</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="rubygem" title="Ruby Gem" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Ruby Gem</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="sapphiregem" title="Sapphire Gem" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Sapphire Gem</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="onyxgem" title="Onyx Gem" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Onyx Gem</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="cottoncandy" title="Cotton Candy" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Cotton Candy</small>
+                </button>
+
+                <button class="kbstyle-swatch" data-kbstyle="galaxynebula" title="Galaxy Nebula" type="button">
+                    <span class="kbstyle-swatch-key">A</span>
+                    <small>Galaxy Nebula</small>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
